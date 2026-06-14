@@ -6,7 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-public class SupplierRequest {
+public class SupplierRequestDTO {
     @NotBlank
     @Size(max = 150)
     private String name;

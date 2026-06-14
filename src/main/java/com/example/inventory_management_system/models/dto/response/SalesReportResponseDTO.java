@@ -7,18 +7,18 @@ import java.math.BigDecimal;
 import java.util.List;
 @Data
 @Builder
-public class SaleReportResponseDTO {
+public class SalesReportResponseDTO {
     private String reportPeriod;
     private Long totalTransactions;
     private BigDecimal totalRevenue;
     private BigDecimal totalTax;
     private BigDecimal netRevenue;
     private Integer totalItemsSold;
-    private List<TopProductResponse> topProducts;
-    private List<DailySalesSummary> dailySummary;
+    private List<TopProductResponseDTO> topProducts;
+    private List<DailySalesSummaryDTO> dailySummary;
 
     @Data @Builder
-    public static class TopProductResponse {
+    public static class TopProductResponseDTO {
         private Long productId;
         private String productName;
         private String sku;
@@ -27,7 +27,7 @@ public class SaleReportResponseDTO {
     }
 
     @Data @Builder
-    public static class DailySalesSummary {
+    public static class DailySalesSummaryDTO {
         private String date;
         private Long transactionCount;
         private BigDecimal revenue;
