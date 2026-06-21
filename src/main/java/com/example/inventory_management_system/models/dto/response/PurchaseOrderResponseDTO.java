@@ -22,4 +22,16 @@ public class PurchaseOrderResponseDTO {
     private List<PurchaseOrderItemResponseDTO> items;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+@Data
+public static class PurchaseOrderItemResponseDTO {
+    private Long id;
+    private Long productId;
+    private String productName;
+    private String productSku;
+    private Integer orderedQuantity;
+    private Integer receivedQuantity;
+    private BigDecimal unitPrice;
+    private BigDecimal totalPrice;
+}
 }

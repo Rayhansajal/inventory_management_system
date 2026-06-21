@@ -15,9 +15,9 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/suppliers")
+@RequestMapping("/api/v1/stock-alerts")
 @RequiredArgsConstructor
-@Tag(name = "Suppliers", description = "Supplier management")
+@Tag(name = "Stock Alerts", description = "Stock alert management")
 @SecurityRequirement(name = "bearerAuth")
 public class StockAlertController {
     private final StockAlertService stockAlertService;
